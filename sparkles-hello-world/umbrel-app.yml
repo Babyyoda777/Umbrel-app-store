@@ -2,7 +2,7 @@ manifestVersion: 1
 id: sparkles-hello-world
 name: KiCad
 tagline: Replace this tagline with your app's tagline
-icon: https://svgur.com/i/mvA.svg
+icon: https://yt3.googleusercontent.com/ytc/AIdro_nk49pBMpGJo7j19q4tsdcV1_nlHfSxCDZUbVpMIvpunw=s900-c-k-c0x00ffffff-no-rj
 category: Development
 version: "1.0.0"
 port: 3000
