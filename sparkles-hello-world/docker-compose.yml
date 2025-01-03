@@ -1,21 +1,18 @@
 version: "3.7"
 
 services:
-
   app_proxy:
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
       APP_HOST: sparkles-hello-world_server_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
-
     
   server:
     image: lscr.io/linuxserver/kicad:latest
-    container_name: kicad
+    restart: on-failure
     hostname: "${DEVICE_HOSTNAME}"
     security_opt:
-      - seccomp:unconfined #optional
+      - seccomp:unconfined
     environment:
       - PUID=1000
       - PGID=1000
@@ -26,4 +23,3 @@ services:
     ports:
       - 3000:3000
       - 3001:3001
-    restart: unless-stopped
