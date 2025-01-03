@@ -5,10 +5,10 @@ services:
   app_proxy:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_kicad_1
+      APP_HOST: sparkles-hello-world_server_1
       APP_PORT: 3000
     
-  kicad:
+  server:
     image: lscr.io/linuxserver/kicad:latest
     user: "1000:1000"
     hostname: "${DEVICE_HOSTNAME}"
